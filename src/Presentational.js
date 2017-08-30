@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Greeting from './Greeting';
 import Input from './Input';
 
@@ -13,8 +14,8 @@ const App = (props) => {
 }
 
 App.propTypes = {
-  greeting: React.PropTypes.string.isReuired,
-  onChange: React.PropTypes.func.isRequired
+  greeting: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
 }
 
 export default App;
