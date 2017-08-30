@@ -11,4 +11,10 @@ const App = (props) => {
     </div>
   );
 }
+
+App.propTypes = {
+  greeting: React.PropTypes.string.isReuired,
+  onChange: React.PropTypes.func.isRequired
+}
+
 export default App;
