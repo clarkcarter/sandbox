@@ -1,7 +1,6 @@
 import React from 'react';
 import Greeting from './Greeting';
 import Input from './Input';
-import Presentational from './Presentational';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +17,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Presentational />
+      <div>
+        <h1>This is my amazing app</h1>
+        <Greeting greeting={this.state.greeting}/>
+        <Input onChange={this.onChange}/>
+      </div>
     );
   }
 }
