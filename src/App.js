@@ -14,6 +14,14 @@ class App extends React.Component {
       this.setState({ text: e.target.value });
   }
 
+  componentDidUpdate(){
+      if (this.state.text.length === 0) {
+        this.setState({
+          text: "Replace this text"
+        });
+      }
+  }
+
   render() {
     return <MiddleMan onChange={this.handleChange} text={this.state.text}/>;
   }
