@@ -1,23 +1,21 @@
 import React from 'react';
-import Presentational from './Presentational';
+import { MiddleMan } from './MiddleMan';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      greeting: "Wasssssup"
+      text: 'Replace this text'
     };
-    this.onChange = this.onChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  onChange(input){
-    this.setState({ greeting: input })
+  handleChange(e) {
+      this.setState({ text: e.target.value });
   }
 
   render() {
-    return (
-      <Presentational greeting={this.state.greeting} onChange={this.onChange}/>
-    );
+    return <MiddleMan onChange={this.handleChange} text={this.state.text}/>;
   }
 }
 
