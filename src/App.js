@@ -1,19 +1,38 @@
 import React from 'react';
-import ErrorBox from './ErrorBox';
-import Title from './Title';
-import Body from './Body';
-import Footer from './Footer';
+import './App.css';
 
-class App extends React.Component {
-  render() {
-    return(
-      <ErrorBox>
-        <Title />
-        <Body />
-        <Footer />
-      </ErrorBox>
-    )
+const numbers = [9,100,60,64,50,1024];
+
+const names = ["Clark", "Jim", "Carlo", "Jerry", "Ted"];
+
+const people = [
+  {
+    name: "Clark",
+    age: 33,
+    gender: "male"
+  },
+  {
+    name: "Bea",
+    age: 30,
+    gender: "female"
+  },
+  {
+    name: "Julien",
+    age: 32,
+    gender: "male"
   }
+]
+
+const App = () => {
+  return (
+    <div>
+      {numbers.map((number) =>
+        <div className="card">
+          <span>{Math.floor(Math.sqrt(number)) * 2}</span>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default App;
